@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje - تطبيق المراسلة الفاخر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شاشة تسجيل الدخول -->
+    <div id="login-screen" class="screen active">
+        <div class="animated-bg"></div>
+        <div class="login-container">
+            <div class="glass-card animate-in">
+                <div class="logo-section">
+                    <div class="logo-glow">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="38" stroke="#7C3AED" stroke-width="2" opacity="0.3"/>
+                            <path d="M40 15L65 65H15L40 15Z" fill="#7C3AED" opacity="0.8"/>
+                            <circle cx="40" cy="40" r="8" fill="#06B6D4"/>
+                        </svg>
+                    </div>
+                    <h1>Mensaje</h1>
+                    <p>تطبيق المراسلة الفاخر</p>
+                </div>
+
+                <div class="login-form">
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" id="phone-input" placeholder="+966 50 000 0000" class="glass-input">
+                    </div>
+
+                    <button id="phone-btn" class="btn btn-primary animate-in" style="animation-delay: 0.1s">
+                        <span>تسجيل برقم الهاتف</span>
+                        <span class="btn-glow"></span>
+                    </button>
+
+                    <div class="divider">أو</div>
+
+                    <button id="email-btn" class="btn btn-secondary animate-in" style="animation-delay: 0.2s">
+                        <span>تسجيل ببريد إلكتروني</span>
+                    </button>
+
+                    <p class="terms">بالتسجيل، أنت توافق على شروط الخدمة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة المحادثات -->
+    <div id="chat-screen" class="screen">
+        <div class="chat-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h2>الرسائل</h2>
+                    <button class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن محادثة..." class="glass-input">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </div>
+
+                <div class="chats-list">
+                    <div class="chat-item active" data-chat="1">
+                        <div class="avatar glow-element">أ</div>
+                        <div class="chat-info">
+                            <h3>أحمد محمد</h3>
+                            <p>مرحباً، كيف حالك؟</p>
+                        </div>
+                        <span class="time">الآن</span>
+                    </div>
+                    <div class="chat-item" data-chat="2">
+                        <div class="avatar">👥</div>
+                        <div class="chat-info">
+                            <h3>مجموعة العمل</h3>
+                            <p>تم إكمال المشروع</p>
+                        </div>
+                        <span class="time">10:30</span>
+                    </div>
+                    <div class="chat-item" data-chat="3">
+                        <div class="avatar">ف</div>
+                        <div class="chat-info">
+                            <h3>فاطمة علي</h3>
+                            <p>شكراً لك</p>
+                        </div>
+                        <span class="time">أمس</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <div class="chat-header">
+                    <div class="header-info">
+                        <div class="avatar-large">أ</div>
+                        <div>
+                            <h2>أحمد محمد</h2>
+                            <p>نشط الآن</p>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="icon-btn">📞</button>
+                        <button class="icon-btn">📹</button>
+                        <button class="icon-btn">⋮</button>
+                    </div>
+                </div>
+
+                <div class="messages-container">
+                    <div class="message incoming message-bubble">
+                        <p>مرحباً! كيف حالك؟</p>
+                        <span class="time">10:15</span>
+                    </div>
+                    <div class="message outgoing message-bubble">
+                        <p>بخير، شكراً للسؤال 😊</p>
+                        <span class="time">10:16</span>
+                    </div>
+                    <div class="message incoming message-bubble">
+                        <p>هل لديك وقت للاجتماع؟</p>
+                        <span class="time">10:18</span>
+                    </div>
+                    <div class="message outgoing message-bubble">
+                        <p>نعم، بعد 15 دقيقة</p>
+                        <span class="time">10:20</span>
+                    </div>
+                </div>
+
+                <div class="message-input">
+                    <input type="text" placeholder="اكتب رسالة..." class="glass-input">
+                    <button class="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16346272 C3.34915502,0.9 2.40734225,0.9 1.77946707,1.4429026 C0.994623095,2.0605983 0.837654326,3.1 1.15159189,3.88555633 L3.03521743,10.3265496 C3.03521743,10.4836469 3.19218622,10.6407443 3.50612381,10.6407443 L16.6915026,11.4262312 C16.6915026,11.4262312 17.1624089,11.4262312 17.1624089,12.0439269 C17.1624089,12.6615227 16.6915026,12.4744748 16.6915026,12.4744748 Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر العودة -->
+        <button id="back-to-login" class="back-btn">← العودة</button>
+    </div>
+
+    <!-- شاشة لوحة التحكم (Admin) -->
+    <div id="admin-screen" class="screen">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h1>لوحة التحكم</h1>
+                <button id="logout-btn" class="btn btn-secondary">تسجيل الخروج</button>
+            </div>
+
+            <!-- الإحصائيات -->
+            <div class="stats-grid">
+                <div class="stat-card glass-card animate-in" style="animation-delay: 0.1s">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <p>المستخدمون</p>
+                        <h3><span class="count-up" data-target="1250">0</span></h3>
+                    </div>
+                </div>
+                <div class="stat-card glass-card animate-in" style="animation-delay: 0.2s">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-content">
+                        <p>الرسائل</p>
+                        <h3><span class="count-up" data-target="45680">0</span></h3>
+                    </div>
+                </div>
+                <div class="stat-card glass-card animate-in" style="animation-delay: 0.3s">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <p>النشاط</p>
+                        <h3><span class="count-up" data-target="98">0</span>%</h3>
+                    </div>
+                </div>
+                <div class="stat-card glass-card animate-in" style="animation-delay: 0.4s">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <p>الأداء</p>
+                        <h3><span class="count-up" data-target="99">0</span>%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- جدول المستخدمين -->
+            <div class="users-table glass-card animate-in" style="animation-delay: 0.5s">
+                <h2>المستخدمون النشطون</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المستخدم</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>الحالة</th>
+                            <th>الانضمام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row-hover">
+                            <td>أحمد محمد</td>
+                            <td>ahmed@example.com</td>
+                            <td><span class="status-badge active">نشط</span></td>
+                            <td>2024-01-15</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td>فاطمة علي</td>
+                            <td>fatima@example.com</td>
+                            <td><span class="status-badge active">نشط</span></td>
+                            <td>2024-01-16</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td>محمد سالم</td>
+                            <td>mohammed@example.com</td>
+                            <td><span class="status-badge inactive">غير نشط</span></td>
+                            <td>2024-01-17</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td>سارة أحمد</td>
+                            <td>sarah@example.com</td>
+                            <td><span class="status-badge active">نشط</span></td>
+                            <td>2024-01-18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- زر العودة -->
+            <button id="back-to-chat" class="back-btn">← العودة</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
